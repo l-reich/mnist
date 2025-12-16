@@ -1,0 +1,16 @@
+[project]
+name = "mnist-app"
+version = "0.1.0"
+description = "MNIST classifier app"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.124.4",
+    "jupyterlab>=4.5.1",
+    "matplotlib>=3.10.8",
+    "numpy>=2.3.5",
+    "pydantic>=2.12.5",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
+    "uvicorn>=0.38.0",
+]
