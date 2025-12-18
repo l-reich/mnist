@@ -17,7 +17,9 @@ class CNN(nn.Module):
         self.fc = nn.Sequential(
             nn.Linear(64 * 7 * 7, 128),
             nn.ReLU(),
-            nn.Linear(128, 10)
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, 10)
         )
 
     def forward(self, x):

@@ -19,7 +19,7 @@ def main():
     training_loss_per_epoch = []
     val_loss_per_epoch = []
 
-    num_epochs = 5
+    num_epochs = 20
 
     for epoch in range(num_epochs):
         loss = train_one_epoch(
