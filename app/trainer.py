@@ -17,10 +17,13 @@ def get_optimizer(name: str, model: nn.Module, lr: float) -> optim.Optimizer:
     raise ValueError(f"Unknown optimizer: {name}")
 
 
-def train_one_epoch(model, dataloader, optimizer, loss_fn):
+def train_one_epoch(model, dataloader, optimizer, loss_fn, device: torch.device):
     model.train()
     total_loss = 0.0
     for x, y in dataloader:
+        x = x.to(device)
+        y = y.to(device)
+
         optimizer.zero_grad()
         outputs = model(x)
         loss = loss_fn(outputs, y)
